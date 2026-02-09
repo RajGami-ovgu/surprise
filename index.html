@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Valentine App 💘</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg"></div>
+
+  <main class="phone">
+    <header class="topbar">
+      <div class="pill">❤️ Valentine App</div>
+      <div class="status">
+      </div>
+    </header>
+
+    <section class="screen active" data-screen="home">
+      <h1>Hi <span id="herName">Cutie</span> 🧸</h1>
+      <p class="sub">I do not know how to ask you in person.</p>
+
+      <div class="cards">
+        <button class="cardBtn" data-go="compliments">
+          <span class="emoji">💌</span>
+          <span>
+            <b>Compliment Machine</b>
+            <small>Guaranteed butterflies</small>
+          </span>
+          <span class="chev">›</span>
+        </button>
+
+        <button class="cardBtn" data-go="quiz">
+          <span class="emoji">🧠</span>
+          <span>
+            <b>Relationship Quiz</b>
+            <small>100% pass rate*</small>
+          </span>
+          <span class="chev">›</span>
+        </button>
+
+        <button class="cardBtn" data-go="proposal">
+          <span class="emoji">💍</span>
+          <span>
+            <b>The Big Question</b>
+            <small>Do not panic</small>
+          </span>
+          <span class="chev">›</span>
+        </button>
+      </div>
+
+      <p class="footnote">*Select with caution*.</p>
+    </section>
+
+    <section class="screen" data-screen="compliments">
+      <div class="headerRow">
+        <button class="iconBtn" data-back>←</button>
+        <h2>Compliment Machine</h2>
+        <button class="iconBtn" id="sparkBtn">✨</button>
+      </div>
+
+      <div class="bigCard">
+        <div class="heartPulse">❤</div>
+        <p id="compliment" class="bigText">Press “Generate” for a compliment.</p>
+      </div>
+
+      <div class="row">
+        <button class="btn" id="genBtn">Generate 💘</button>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="quiz">
+      <div class="headerRow">
+        <button class="iconBtn" data-back>←</button>
+        <h2>Relationship Quiz</h2>
+        <div style="width:40px"></div>
+      </div>
+
+      <div class="bigCard">
+        <p class="muted tiny">Question <span id="qNum">1</span>/3</p>
+        <p id="question" class="bigText"></p>
+
+        <div class="answers" id="answers"></div>
+      </div>
+
+      <p class="muted tiny" id="quizNote"></p>
+    </section>
+
+    <section class="screen" data-screen="proposal">
+      <div class="headerRow">
+        <button class="iconBtn" data-back>←</button>
+        <h2>The Big Question</h2>
+        <div style="width:40px"></div>
+      </div>
+
+      <div class="bigCard">
+        <p class="bigText center">
+          Will you be my Valentine, <span class="accent" id="herName2">Cutie</span>?
+        </p>
+        <div class="row center">
+          <button class="btn" id="yes">Yes 💖</button>
+          <button class="btn ghost" id="no">No 🙃</button>
+        </div>
+        <p class="muted tiny center" id="answerLine"></p>
+      </div>
+
+      <div class="tiny center muted">Warning: the “No” button is a little shy.</div>
+    </section>
+
+    <footer class="navbar">
+      <button class="navBtn active" data-nav="home">🏠</button>
+      <button class="navBtn" data-nav="compliments">💌</button>
+      <button class="navBtn" data-nav="quiz">🧠</button>
+      <button class="navBtn" data-nav="proposal">💍</button>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
